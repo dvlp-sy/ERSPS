@@ -32,7 +32,7 @@ public class TestDataBatch {
     private final EmailDataStreamService emailDataStreamService;
     private final Random random = new Random();
 
-    @Scheduled(cron = "30 * * * * *")
+    @Scheduled(cron = "0/5 * * * * *")
     public void processTestDataBatch() {
         final int batchSize = 10000 + random.nextInt(990000); // 10,000에서 1,000,000 사이의 랜덤 데이터
         log.info("TEST:DATA:CRTE::: Generating {} random events for ACCOUNT_ID, IP, and DOMAIN metrics.", batchSize);

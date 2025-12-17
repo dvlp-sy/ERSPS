@@ -27,7 +27,7 @@ public class DistinctDataCountBatch {
     private final ExecutorService executorService =
             Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-    @Scheduled(cron = "0 0/1 * * * *")
+    @Scheduled(cron = "0/5 * * * * *")
     public void process() {
         log.info("ELL_:BTCH:STRT::: Starting batch processing");
         try {
