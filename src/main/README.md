@@ -5,10 +5,16 @@
 git clone https://github.com/dvlp-sy/ERSPS.git
 ```
 
-2. docker compose up
+2. gradlew build
 ```bash
 cd ERSPS
-docker-compose up -d db
+./gradlew build
+```
+
+3. docker compose up
+- db가 실행되었는지 확인 후 app 실행
+```bash
+docker-compose up db
 docker-compose up -d
 ```
 
